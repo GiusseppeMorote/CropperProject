@@ -1,0 +1,37 @@
+<!-- <input type="file" (change)="fileChangeEvent($event)" />
+
+<image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="4 / 3"
+    [resizeToWidth]="128"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()"
+></image-cropper>
+
+<img [src]="croppedImage" /> -->
+
+<h1>INDICES</h1>
+<div class="container">
+  <div class="content">
+    <label for="">Indice 1</label>
+    <button type="button" (click)="showIndex1()">ver Indice 1</button>
+    <br>
+    <br>
+    <label for="">Indice 2</label>
+    <button type="button" (click)="showIndex2()">ver Indice 2</button>
+  </div>
+</div>
+
+<app-img-cropper
+ [show]="true"
+ [enableFile]="enableFile"
+ [imageBase64]="imageBase64"
+ [cropperPosition]="cropperPosition"
+ (eventCropper)="eventCropper($event)"
+ >
+
+</app-img-cropper>

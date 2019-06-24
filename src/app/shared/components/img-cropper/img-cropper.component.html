@@ -1,0 +1,29 @@
+<ng-container>
+  <ng-container *ngIf="enableFile">
+    <input type="file" (change)="fileChangeEvent($event)">
+    
+  </ng-container>
+  <ng-container>
+      <br>
+      <br>
+      <br>
+      <button type="button" (click)="createIndex()">CLICK</button>
+  </ng-container>
+
+  <image-cropper
+    [cropper]=setPosition
+    (cropperReady)="cropperReady()"
+    [autoCrop]=false
+    [imageChangedEvent]="imageChangedEvent"
+    [imageBase64]="imageBase64"
+    [maintainAspectRatio]="false"
+    [aspectRatio]="aspectRatio"
+    [resizeToWidth]="resizeToWidth"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (loadImageFailed)="loadImageFailed()"
+    
+></image-cropper>
+</ng-container>
+
