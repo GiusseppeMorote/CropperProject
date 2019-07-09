@@ -1,0 +1,28 @@
+<!-- <p>
+  test-image works!
+</p> -->
+
+<div >
+<button (click)="getData()">get data</button>
+<br>
+<br>
+<button (click)="setData()">ver indice seteado</button>
+<br>
+<br>
+
+<input type="file" (change)="changeListener($event)" accept="image/*" multiple>
+<br>
+<br>
+<button (click)="exportCanvasBase64()">verBase64</button>
+<br>
+<br>
+<angular-cropper 
+#angularCropper 
+[cropperOptions]="config"
+(export)="getImageBase64($event)"
+[imageUrl]="imageUrl">
+
+</angular-cropper>
+</div>
+
+<img [src]="imgUrl"/>

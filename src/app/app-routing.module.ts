@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: './pages/home/home.module#HomeModule', pathMatch: 'full' },
+  { path: 'test', loadChildren: './pages/test-image/test-image.module#TestImageModule', pathMatch: 'full' },
   { path: '**', redirectTo: '/' }
 ];
 
